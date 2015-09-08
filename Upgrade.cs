@@ -20,7 +20,11 @@ namespace CookieClicker
 
         public Upgrade(string naam, int kps, int prijs, int prijsinterval)
         {
-            Aantal = 0;
+            this.Naam = naam;
+            this.Kps = kps;
+            this.Prijs = prijs;
+            this.PrijsInterval = prijsinterval;
+            this.Aantal = 0;
         }
     }
 }

@@ -28,10 +28,11 @@ namespace CookieClicker
             upgrades[1] = Oven;
             upgrades[2] = DeegRoller;
 
+            InitializeComponent();
+            ControleerUpgrades();
+
             //Start de timer
             CookieTimer.Start();
-
-            InitializeComponent();
         }
 
         private void CookieTimer_Tick(object sender, EventArgs e)
@@ -53,41 +54,56 @@ namespace CookieClicker
             else btnDeegroller.Enabled = false;
         }
 
-        private void UpdateVelden()
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            lblKoekjes.Text = koekjesController.Koekjes.ToString();
-            lblKps.Text = koekjesController.Kps.ToString();
-            btnBakker.Text = "Bakker (100) :" + upgrades[0].Aantal;
-            btnOven.Text = "Oven (2000) :" + upgrades[1].Aantal;
-            btnDeegroller.Text = "Deegroller (3500) :" + upgrades[2].Aantal;
-        }
-
-        private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            koekjesController.Koekjes += 10;
+            koekjesController.Koekjes += koekjesController.KoekjesPerKlik;
             ControleerUpgrades();
             UpdateVelden();
         }
 
+        private void UpdateVelden()
+        {
+            lblKoekjes.Text = koekjesController.Koekjes.ToString();
+            lblKps.Text = koekjesController.Kps.ToString();
+            btnBakker.Text = "Bakker (" + upgrades[0].Prijs + ") :" + upgrades[0].Aantal;
+            btnOven.Text = "Oven (" + upgrades[1].Prijs + ") :" + upgrades[1].Aantal;
+            btnDeegroller.Text = "Deegroller (" + upgrades[2].Prijs + ") :" + upgrades[2].Aantal;
+        }
+
         private void btnBakker_Click(object sender, EventArgs e)
         {
-            upgrades[0].Aantal += 1;
-            upgrades[0].Prijs += upgrades[0].PrijsInterval;
-            koekjesController.Kps += upgrades[0].Kps;
+            if (koekjesController.Koekjes >= upgrades[0].Prijs)
+            {
+                upgrades[0].Aantal += 1;
+                koekjesController.Kps += upgrades[0].Kps;
+                koekjesController.Koekjes -= upgrades[0].Prijs;
+                upgrades[0].Prijs += upgrades[0].PrijsInterval;
+            }
+            UpdateVelden();
         }
 
         private void btnOven_Click(object sender, EventArgs e)
         {
-            upgrades[1].Aantal += 1;
-            upgrades[1].Prijs += upgrades[1].PrijsInterval;
-            koekjesController.Kps += upgrades[1].Kps;
+            if (koekjesController.Koekjes >= upgrades[1].Prijs)
+            {
+                upgrades[1].Aantal += 1;
+                koekjesController.Kps += upgrades[1].Kps;
+                koekjesController.Koekjes -= upgrades[1].Prijs;
+                upgrades[1].Prijs += upgrades[1].PrijsInterval;
+            }
+            UpdateVelden();
         }
 
         private void btnDeegroller_Click(object sender, EventArgs e)
         {
-            upgrades[2].Aantal += 1;
-            upgrades[2].Prijs += upgrades[2].PrijsInterval;
-            koekjesController.Kps += upgrades[2].Kps;
+            if (koekjesController.Koekjes >= upgrades[2].Prijs)
+            {
+                upgrades[2].Aantal += 1;
+                koekjesController.KoekjesPerKlik += 10;
+                koekjesController.Koekjes -= upgrades[2].Prijs;
+                upgrades[2].Prijs += upgrades[2].PrijsInterval;
+            }
+            UpdateVelden();
         }
     }
 }

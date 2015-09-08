@@ -55,7 +55,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(225, 225);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDoubleClick);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // btnBakker
             // 
@@ -178,6 +178,7 @@
             // 
             // CookieTimer
             // 
+            this.CookieTimer.Enabled = true;
             this.CookieTimer.Interval = 1000;
             this.CookieTimer.Tick += new System.EventHandler(this.CookieTimer_Tick);
             // 

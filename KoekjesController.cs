@@ -16,9 +16,9 @@ namespace CookieClicker
 
         public KoekjesController()
         {
-            Kps = 0;
-            Koekjes = 0;
-            KoekjesPerKlik = 10;
+            this.Kps = 0;
+            this.Koekjes = 0;
+            this.KoekjesPerKlik = 10;
         }
     }
 }
