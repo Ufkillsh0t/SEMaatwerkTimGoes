@@ -50,8 +50,10 @@
     <Compile Include="CookieClicker.Designer.cs">
       <DependentUpon>CookieClicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="KoekjesController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Upgrade.cs" />
     <EmbeddedResource Include="CookieClicker.resx">
       <DependentUpon>CookieClicker.cs</DependentUpon>
     </EmbeddedResource>

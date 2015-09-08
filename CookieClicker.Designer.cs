@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CookieClicker));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBakker = new System.Windows.Forms.Button();
             this.gbxUpgrades = new System.Windows.Forms.GroupBox();
+            this.lblKpsDeegroller = new System.Windows.Forms.Label();
+            this.lblKpsOven = new System.Windows.Forms.Label();
             this.lblKpsBakker = new System.Windows.Forms.Label();
             this.btnDeegroller = new System.Windows.Forms.Button();
             this.btnOven = new System.Windows.Forms.Button();
-            this.lblKpsOven = new System.Windows.Forms.Label();
-            this.lblKpsDeegroller = new System.Windows.Forms.Label();
             this.lblUKps = new System.Windows.Forms.Label();
             this.lblUKoekjes = new System.Windows.Forms.Label();
             this.lblKps = new System.Windows.Forms.Label();
             this.lblKoekjes = new System.Windows.Forms.Label();
+            this.CookieTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxUpgrades.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +83,24 @@
             this.gbxUpgrades.TabStop = false;
             this.gbxUpgrades.Text = "Upgrades";
             // 
+            // lblKpsDeegroller
+            // 
+            this.lblKpsDeegroller.AutoSize = true;
+            this.lblKpsDeegroller.Location = new System.Drawing.Point(206, 194);
+            this.lblKpsDeegroller.Name = "lblKpsDeegroller";
+            this.lblKpsDeegroller.Size = new System.Drawing.Size(93, 20);
+            this.lblKpsDeegroller.TabIndex = 6;
+            this.lblKpsDeegroller.Text = "+ 10 per klik";
+            // 
+            // lblKpsOven
+            // 
+            this.lblKpsOven.AutoSize = true;
+            this.lblKpsOven.Location = new System.Drawing.Point(206, 125);
+            this.lblKpsOven.Name = "lblKpsOven";
+            this.lblKpsOven.Size = new System.Drawing.Size(71, 20);
+            this.lblKpsOven.TabIndex = 5;
+            this.lblKpsOven.Text = "+ 50 Kps";
+            // 
             // lblKpsBakker
             // 
             this.lblKpsBakker.AutoSize = true;
@@ -111,24 +131,6 @@
             this.btnOven.TabIndex = 2;
             this.btnOven.Text = "Oven (2000) :";
             this.btnOven.UseVisualStyleBackColor = true;
-            // 
-            // lblKpsOven
-            // 
-            this.lblKpsOven.AutoSize = true;
-            this.lblKpsOven.Location = new System.Drawing.Point(206, 125);
-            this.lblKpsOven.Name = "lblKpsOven";
-            this.lblKpsOven.Size = new System.Drawing.Size(71, 20);
-            this.lblKpsOven.TabIndex = 5;
-            this.lblKpsOven.Text = "+ 50 Kps";
-            // 
-            // lblKpsDeegroller
-            // 
-            this.lblKpsDeegroller.AutoSize = true;
-            this.lblKpsDeegroller.Location = new System.Drawing.Point(206, 194);
-            this.lblKpsDeegroller.Name = "lblKpsDeegroller";
-            this.lblKpsDeegroller.Size = new System.Drawing.Size(93, 20);
-            this.lblKpsDeegroller.TabIndex = 6;
-            this.lblKpsDeegroller.Text = "+ 10 per klik";
             // 
             // lblUKps
             // 
@@ -170,7 +172,12 @@
             this.lblKoekjes.TabIndex = 6;
             this.lblKoekjes.Text = "0";
             // 
-            // Form1
+            // CookieTimer
+            // 
+            this.CookieTimer.Interval = 1000;
+            this.CookieTimer.Tick += new System.EventHandler(this.CookieTimer_Tick);
+            // 
+            // CookieClicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +189,7 @@
             this.Controls.Add(this.lblUKps);
             this.Controls.Add(this.gbxUpgrades);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "CookieClicker";
             this.Text = "CookieClicker";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxUpgrades.ResumeLayout(false);
@@ -206,6 +213,7 @@
         private System.Windows.Forms.Label lblUKoekjes;
         private System.Windows.Forms.Label lblKps;
         private System.Windows.Forms.Label lblKoekjes;
+        private System.Windows.Forms.Timer CookieTimer;
     }
 }
 
