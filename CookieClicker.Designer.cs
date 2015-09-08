@@ -55,6 +55,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(225, 225);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDoubleClick);
             // 
             // btnBakker
             // 
@@ -64,8 +65,9 @@
             this.btnBakker.Name = "btnBakker";
             this.btnBakker.Size = new System.Drawing.Size(184, 63);
             this.btnBakker.TabIndex = 1;
-            this.btnBakker.Text = "Bakker (100):";
+            this.btnBakker.Text = "Bakker (100) :";
             this.btnBakker.UseVisualStyleBackColor = true;
+            this.btnBakker.Click += new System.EventHandler(this.btnBakker_Click);
             // 
             // gbxUpgrades
             // 
@@ -120,6 +122,7 @@
             this.btnDeegroller.TabIndex = 3;
             this.btnDeegroller.Text = "Deegroller (3500) :";
             this.btnDeegroller.UseVisualStyleBackColor = true;
+            this.btnDeegroller.Click += new System.EventHandler(this.btnDeegroller_Click);
             // 
             // btnOven
             // 
@@ -131,6 +134,7 @@
             this.btnOven.TabIndex = 2;
             this.btnOven.Text = "Oven (2000) :";
             this.btnOven.UseVisualStyleBackColor = true;
+            this.btnOven.Click += new System.EventHandler(this.btnOven_Click);
             // 
             // lblUKps
             // 
