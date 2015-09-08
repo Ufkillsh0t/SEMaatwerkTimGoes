@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CookieClicker
 {
-    public partial class Form1 : Form
+    public partial class CookieClicker : Form
     {
-        public Form1()
+        public CookieClicker()
         {
             InitializeComponent();
         }
