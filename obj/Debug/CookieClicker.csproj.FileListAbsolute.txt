@@ -1,1 +1,9 @@
 F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\bin\Debug\CookieClicker.exe.config
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\bin\Debug\CookieClicker.exe
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\bin\Debug\CookieClicker.pdb
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.csprojResolveAssemblyReference.cache
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.CookieClicker.resources
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.Properties.Resources.resources
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.csproj.GenerateResource.Cache
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.exe
+F:\Maatwerk\SE2\Opdrachten\CookieClicker\CookieClicker\obj\Debug\CookieClicker.pdb
